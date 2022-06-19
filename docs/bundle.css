@@ -322,18 +322,24 @@ body {
 .connect-wallet-popup {
   position: relative;
   max-width: 420px;
-  width: 90%;
+  width: 100%;
   margin: auto;
   border-radius: 4px;
-  background-color: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .connect-wallet-popup > h2 {
   font-size: 24px;
   padding: 16px;
 }
+.connect-wallet-popup > hr {
+  border: 0;
+  background-color: #CCC;
+  height: 0.5px;
+  margin: 0px 16px;
+}
 .connect-wallet-popup > p {
+  line-height: 20px;
   padding: 16px;
-  border-top: 1px solid #CCC;
   color: #CCC;
 }
 .connect-wallet-popup > .button-container {
@@ -604,6 +610,74 @@ body {
 .user-menu > ul > li > a:active {
   color: #b19c76;
 }
+.inventory-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 16px;
+  padding: 0px 16px;
+  height: 72px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.inventory-item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.inventory-item > .title {
+  display: flex;
+  align-items: center;
+}
+.inventory-item > .title > img {
+  height: 64px;
+  margin-right: 8px;
+}
+.inventory-item > .title > h6 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.inventory-item > .amount {
+  font-weight: 400;
+  font-size: 16px;
+}
+.erc20-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 16px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.erc20-item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.erc20-item > .left-container > h6 {
+  font-size: 20px;
+}
+.erc20-item > .left-container > img {
+  height: 128px;
+}
+.erc20-item > .right-container > p {
+  font-size: 18px;
+  margin: 16px 0px;
+}
+.erc20-item > .right-container > a {
+  display: block;
+  background-color: black;
+  padding: 8px;
+}
+.erc721-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.erc1155-item {
+  display: flex;
+  align-items: center;
+}
 .layout {
   width: 100%;
   background-color: black;
@@ -758,5 +832,19 @@ body {
   margin-bottom: 32px;
   font-size: 14px;
   font-weight: 300;
+}
+.erc20-view > section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.erc721-view > section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.erc1155-view > section {
+  display: flex;
+  gap: 20px;
 }
 
