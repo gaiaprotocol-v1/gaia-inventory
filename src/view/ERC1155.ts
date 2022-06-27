@@ -39,6 +39,9 @@ export default class ERC1155 implements View {
     private init() {
         this.ercList.append(
             new ERC1155Item("injeolmi", "injeolmi", 3562),
+            new ERC1155Item("injeolmi", "injeolmi", 3562),
+            new ERC1155Item("injeolmi", "injeolmi", 3562),
+
         )
     }
 

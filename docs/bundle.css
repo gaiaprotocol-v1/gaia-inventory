@@ -820,7 +820,7 @@ body {
   background: url("/images/img/resourcesSlot.png");
   max-width: 1048px;
   width: 100%;
-  height: 303px;
+  height: 100%;
 }
 .erc1155-item > header {
   width: 100%;
@@ -919,7 +919,7 @@ body {
   .erc1155-item > .content > .button-container {
     margin-top: 16px;
     width: 100%;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
   }
   .erc1155-item > .content > .button-container > a {
@@ -1039,12 +1039,6 @@ body {
   margin-top: 64px;
 }
 @media only screen and (max-width: 719px) {
-  .erc20-view > section {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 32px;
-  }
-}
-@media only screen and (max-width: 719px) {
   .erc721-view {
     padding: 8px;
   }
@@ -1130,14 +1124,14 @@ body {
   margin-right: 8px;
 }
 .erc1155-view > section > .erc-list {
+  margin-top: 32px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
 @media only screen and (max-width: 719px) {
   .erc1155-view > section > .erc-list {
-    display: flex;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

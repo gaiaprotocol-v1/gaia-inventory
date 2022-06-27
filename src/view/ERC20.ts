@@ -26,7 +26,6 @@ export default class ERC20 implements View {
                 ),
             ),
             this.ercList = el("section",
-                new ERC20Item("injeolmi", "인절미", 1100),
             ),
         ));
         this.init();
@@ -35,6 +34,9 @@ export default class ERC20 implements View {
 
     private init() {
         this.ercList.append(
+            new ERC20Item("injeolmi", "인절미", 1100),
+            new ERC20Item("injeolmi", "인절미", 1100),
+            new ERC20Item("injeolmi", "인절미", 1100),
             new ERC20Item("injeolmi", "인절미", 1100),
         )
     }
