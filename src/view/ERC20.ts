@@ -6,6 +6,8 @@ import ViewUtil from "./ViewUtil";
 
 export default class ERC20 implements View {
 
+    private ercList: DomNode;
+
     private container: DomNode;
     private interval: any;
 
@@ -14,17 +16,29 @@ export default class ERC20 implements View {
         Layout.current.title = "ERC20";
         Layout.current.content.append(this.container = el(".erc20-view",
             el("header",
-                el("a", "< 뒤로가기", {
+                el("a", {
                     click: () => {
                         ViewUtil.go("/")
                     }
-                }),
+                },
+                    el("p", "뒤로가기",),
+                    el("img", { src: "/images/img/back.png", alt: "뒤로가기" })
+                ),
             ),
-            el("section",
+            this.ercList = el("section",
                 new ERC20Item("injeolmi", "인절미", 1100),
             ),
         ));
+        this.init();
     }
+
+
+    private init() {
+        this.ercList.append(
+            new ERC20Item("injeolmi", "인절미", 1100),
+        )
+    }
+
 
     public changeParams(params: ViewParams, uri: string): void { }
 

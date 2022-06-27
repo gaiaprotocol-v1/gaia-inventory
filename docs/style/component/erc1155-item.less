@@ -1,4 +1,73 @@
 .erc1155-item {
-    display    : flex;
-    align-items: center;
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-start;
+    background     : url("/images/img/resourcesSlot.png");
+    max-width      : 1048px;
+    width          : 100%;
+    height         : 303px;
+
+    >header {
+        width      : 100%;
+        font-size  : 20px;
+        color      : #d0c0a3;
+        text-align : left;
+        margin-top : 24px;
+        margin-left: 30px;
+    }
+
+    >img {
+        margin-left: 24px;
+        max-width  : 250px;
+    }
+
+    >.content {
+        display        : flex;
+        height         : 100%;
+        flex-direction : column;
+        justify-content: space-between;
+        margin-left    : 32px;
+
+        >header {
+            margin-top: 16px;
+
+            >h6 {
+                font-weight: bold;
+                font-size  : 18px;
+                margin     : 20px 0px;
+            }
+
+            >p {
+                font-weight: bold;
+                font-size  : 18px;
+                color      : rgb(178, 167, 148);
+            }
+        }
+
+        >.button-container {
+            display      : flex;
+            gap          : 12px;
+            margin-bottom: 32px;
+
+            >a {
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+                font-size      : 20px;
+                color          : #f8f0eb;
+            }
+
+            >.detail-button {
+                width     : 216px;
+                height    : 61px;
+                background: url("/images/img/blackButton.png");
+            }
+
+            >a.send-button {
+                width     : 216px;
+                height    : 61px;
+                background: url("/images/img/redButton.png");
+            }
+        }
+    }
 }

@@ -8,12 +8,14 @@ export default class ERC20Item extends DomNode {
     ) {
         super(".erc20-item");
         this.append(
-            el(".left-container",
-                el("h6", title),
+            el(".img-container",
                 el("img", { src: `/images/img/${image}.png`, alt: title }),
             ),
-            el(".right-container",
-                el("p", `${amount} IJM`),
+            el(".content",
+                el(".title",
+                    el("h6", `${title}`),
+                    el("p", `${amount} 개`),
+                ),
                 el("a", "전송하기"),
             ),
         )

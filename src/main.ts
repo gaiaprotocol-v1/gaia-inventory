@@ -5,7 +5,7 @@ import Wallet from "./klaytn/Wallet";
 import ERC1155 from "./view/ERC1155";
 import ERC20 from "./view/ERC20";
 import ERC721 from "./view/ERC721";
-import InventoryList from "./view/InventoryList";
+import InventoryList from "./view/Inventory";
 import Layout from "./view/Layout";
 
 (async () => {

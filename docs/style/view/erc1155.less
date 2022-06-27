@@ -1,6 +1,43 @@
 .erc1155-view {
+    >header {
+        >a {
+            max-width     : 140px;
+            display       : flex;
+            flex-direction: column;
+            align-items   : flex-end;
+            font-size     : 20px;
+
+            >p {
+                margin-right: 12px;
+            }
+        }
+    }
+
     >section {
-        display: flex;
-        gap    : 20px;
+        display       : flex;
+        flex-direction: column;
+        margin-top    : 32px;
+
+        >header {
+            display      : flex;
+            font-family  : 'Trajan Pro Bold';
+            margin-bottom: 32px;
+
+            >h5 {
+                color    : rgb(202, 179, 155);
+                font-size: 30px;
+            }
+
+            >.gaia {
+                color       : #fff;
+                margin-right: 8px;
+            }
+        }
+
+        >.erc-list {
+            display              : grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap                  : 20px;
+        }
     }
 }

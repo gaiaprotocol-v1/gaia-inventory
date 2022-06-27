@@ -5,12 +5,16 @@ export default class ERC721Item extends DomNode {
         id: string,
         image: string,
     ) {
-        super(".erc721-item");
+        super("a.erc721-item");
         this.append(
-            el("id", id),
+            el("header",
+                el("p", `#${id}`),
+            ),
             el("img", { src: `/images/img/${image}.png`, alt: id }),
-            el("a", "상세보기"),
-            el("a", "전송하기"),
+            el(".button-container",
+                el("a.detail-button", "상세보기"),
+                el("a.send-button", "전송하기"),
+            ),
         );
     }
 

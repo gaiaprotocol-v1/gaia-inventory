@@ -6,6 +6,8 @@ import ViewUtil from "./ViewUtil";
 
 export default class ERC1155 implements View {
 
+    private ercList: DomNode;
+
     private container: DomNode;
     private interval: any;
 
@@ -14,16 +16,30 @@ export default class ERC1155 implements View {
         Layout.current.title = "ERC1155";
         Layout.current.content.append(this.container = el(".erc1155-view",
             el("header",
-                el("a", "< 뒤로가기", {
+                el("a", {
                     click: () => {
                         ViewUtil.go("/")
                     }
-                }),
+                },
+                    el("p", "뒤로가기",),
+                    el("img", { src: "/images/img/back.png", alt: "뒤로가기" })
+                ),
             ),
             el("section",
-                new ERC1155Item("injeolmi", "인절미", 111),
+                el("header",
+                    el("h5.gaia", "GAIA"),
+                    el("h5", "RESOURCES"),
+                ),
+                this.ercList = el(".erc-list"),
             ),
         ));
+        this.init();
+    }
+
+    private init() {
+        this.ercList.append(
+            new ERC1155Item("injeolmi", "injeolmi", 3562),
+        )
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

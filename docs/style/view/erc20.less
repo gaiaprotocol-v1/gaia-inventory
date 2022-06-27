@@ -1,7 +1,22 @@
 .erc20-view {
+    >header {
+        >a {
+            max-width     : 140px;
+            display       : flex;
+            flex-direction: column;
+            align-items   : flex-end;
+            font-size     : 20px;
+
+            >p {
+                margin-right: 12px;
+            }
+        }
+    }
+
     >section {
         display              : grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap                  : 20px;
+        margin-top           : 64px;
     }
 }

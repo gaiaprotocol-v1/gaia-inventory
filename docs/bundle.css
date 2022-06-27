@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 /*
 https://github.com/Hanul/sky-css-base
 v0.0.1 | 20210109
@@ -177,13 +178,11 @@ input {
   font-weight: normal;
   src: local('Trajan Pro Bold'), url('fonts/TrajanPro-Bold.woff') format('woff');
 }
-@font-face {
-  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
-  @import url("https://p.typekit.net/p.css?s=1&k=zoc8uhz&ht=tk&f=15665.15666&a=43843172&app=typekit&e=css");
+.nanummyeongjo * {
+  font-family: 'Nanum Myeongjo', serif;
 }
 body {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-  background: linear-gradient(#111112, #2a292a) fixed;
+  font-family: 'Nanum Myeongjo', serif;
   margin: auto;
   color: white;
 }
@@ -610,192 +609,185 @@ body {
 .user-menu > ul > li > a:active {
   color: #b19c76;
 }
-.inventory-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 4px;
-  margin: 16px;
-  padding: 0px 16px;
-  height: 72px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.inventory-item:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.inventory-item > .title {
+.erc-item {
   display: flex;
   align-items: center;
+  background: url("/images/img/InventorySlot.png");
+  max-width: 564px;
+  height: 144px;
 }
-.inventory-item > .title > img {
-  height: 64px;
-  margin-right: 8px;
+.erc-item > .img-container {
+  margin-left: 20px;
 }
-.inventory-item > .title > h6 {
-  font-size: 20px;
-  font-weight: 500;
+.erc-item > .img-container > img {
+  width: 104px;
+  height: 104px;
 }
-.inventory-item > .amount {
-  font-weight: 400;
-  font-size: 16px;
+.erc-item > .content {
+  margin-left: 20px;
+}
+.erc-item > .content > h6 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.erc-item > .content > p {
+  font-weight: bold;
+  font-size: 18px;
+  color: #b2a794;
 }
 .erc20-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
+}
+.erc20-item > .img-container {
+  background-color: #000;
+  border: 1px solid #292a25;
   border-radius: 4px;
-  margin: 16px;
-  padding: 16px;
-  background-color: rgba(255, 255, 255, 0.2);
 }
-.erc20-item:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+.erc20-item > .img-container > img {
+  max-width: 200px;
 }
-.erc20-item > .left-container > h6 {
-  font-size: 20px;
+.erc20-item > .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
 }
-.erc20-item > .left-container > img {
-  height: 128px;
-}
-.erc20-item > .right-container > p {
+.erc20-item > .content > .title > h6 {
+  font-weight: bold;
   font-size: 18px;
-  margin: 16px 0px;
+  margin: 20px 0px;
 }
-.erc20-item > .right-container > a {
-  display: block;
-  background-color: black;
-  padding: 8px;
+.erc20-item > .content > .title > p {
+  font-weight: bold;
+  font-size: 18px;
+  color: #b2a794;
+}
+.erc20-item > .content > a {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 216px;
+  height: 61px;
+  background: url("/images/img/blackButton.png");
 }
 .erc721-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: url("/images/img/erc721Slot.png");
+  max-width: 376px;
+  height: 567px;
+}
+.erc721-item > header {
+  width: 100%;
+  font-size: 20px;
+  color: #d0c0a3;
+  text-align: left;
+  margin-top: 24px;
+  margin-left: 30px;
+}
+.erc721-item > img {
+  max-width: 250px;
+}
+.erc721-item > .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.erc721-item > .button-container > a {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  text-align: center;
+  font-size: 20px;
+  color: #f8f0eb;
+}
+.erc721-item > .button-container > .detail-button {
+  width: 216px;
+  height: 61px;
+  background: url("/images/img/blackButton.png");
+}
+.erc721-item > .button-container > a.send-button {
+  width: 216px;
+  height: 61px;
+  background: url("/images/img/redButton.png");
 }
 .erc1155-item {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  background: url("/images/img/resourcesSlot.png");
+  max-width: 1048px;
+  width: 100%;
+  height: 303px;
+}
+.erc1155-item > header {
+  width: 100%;
+  font-size: 20px;
+  color: #d0c0a3;
+  text-align: left;
+  margin-top: 24px;
+  margin-left: 30px;
+}
+.erc1155-item > img {
+  margin-left: 24px;
+  max-width: 250px;
+}
+.erc1155-item > .content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 32px;
+}
+.erc1155-item > .content > header {
+  margin-top: 16px;
+}
+.erc1155-item > .content > header > h6 {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px 0px;
+}
+.erc1155-item > .content > header > p {
+  font-weight: bold;
+  font-size: 18px;
+  color: #b2a794;
+}
+.erc1155-item > .content > .button-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.erc1155-item > .content > .button-container > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #f8f0eb;
+}
+.erc1155-item > .content > .button-container > .detail-button {
+  width: 216px;
+  height: 61px;
+  background: url("/images/img/blackButton.png");
+}
+.erc1155-item > .content > .button-container > a.send-button {
+  width: 216px;
+  height: 61px;
+  background: url("/images/img/redButton.png");
 }
 .layout {
   width: 100%;
-  background-color: black;
-}
-.layout > header {
-  display: flex;
-  position: sticky;
-  justify-items: center;
-  background-color: black;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 999;
-}
-@media only screen and (max-width: 719px) {
-  .layout > header {
-    height: auto;
-  }
-}
-.layout > header > .nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-  max-width: 1240px;
-  margin: auto;
-  padding: 8px;
-}
-.layout > header > .nav > .logo {
-  flex-grow: 1;
-}
-.layout > header > .nav > .logo > a {
-  display: flex;
-  align-items: center;
-}
-.layout > header > .nav > .logo > a > img {
-  height: 36px;
-  margin-right: 4px;
-}
-.layout > header > .nav > .logo > a > h1 {
-  font-size: 20px;
-  font-family: 'Trajan Pro Bold';
-  color: #b19c76;
-}
-@media only screen and (max-width: 719px) {
-  .layout > header > .nav > .logo > a > h1 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 719px) {
-  .layout > header > .nav > .pc-menu {
-    display: none;
-  }
-}
-.layout > header > .nav > .right {
-  display: flex;
-  align-items: center;
-}
-.layout > header > .nav > .right:after {
-  content: " ";
-  display: block;
-  font-size: 0;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-.layout > header > .nav > .right > .user-menu {
-  float: right;
-}
-@media only screen and (max-width: 719px) {
-  .layout > header > .nav > .right > .user-menu {
-    display: none;
-  }
-}
-.layout > header > .nav > .right > .language-select {
-  cursor: pointer;
-  padding: 8px 8px 8px 8px;
-  font-size: 0.875rem;
-  text-decoration: none;
-  color: white;
-  background-color: transparent;
-  border: none;
-  margin-right: 8px;
-}
-.layout > header > .nav > .right > .language-select:hover {
-  background-color: rgba(177, 156, 118, 0.5);
-  border-radius: 4px;
-}
-.layout > header > .nav > .right > .language-select:active {
-  background-color: rgba(177, 156, 118, 0.7);
-  border-radius: 4px;
-}
-@media only screen and (max-width: 719px) {
-  .layout > header > .nav > .right > .language-select {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-  }
-  .layout > header > .nav > .right > .language-select:hover {
-    background-color: #333332;
-  }
-}
-.layout > header > .nav > .right > .menu-button {
-  float: right;
-  display: none;
-  padding: 10px;
-}
-@media only screen and (max-width: 719px) {
-  .layout > header > .nav > .right > .menu-button {
-    display: block;
-  }
+  background: url("/images/img/background.jpg");
 }
 .layout > main {
-  max-width: 1240px;
+  max-width: 1200px;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  justify-content: center;
   margin: auto;
   padding: 32px 0px;
 }
@@ -833,18 +825,103 @@ body {
   font-size: 14px;
   font-weight: 300;
 }
+.inventory-view > header {
+  display: flex;
+  font-family: 'Trajan Pro Bold';
+  margin-bottom: 32px;
+}
+.inventory-view > header > h2 {
+  color: #cab39b;
+  font-size: 30px;
+}
+.inventory-view > header > .gaia {
+  color: #fff;
+  margin-right: 8px;
+}
+.inventory-view > section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.erc20-view > header > a {
+  max-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 20px;
+}
+.erc20-view > header > a > p {
+  margin-right: 12px;
+}
 .erc20-view > section {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  margin-top: 64px;
+}
+.erc721-view > header > a {
+  max-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 20px;
+}
+.erc721-view > header > a > p {
+  margin-right: 12px;
 }
 .erc721-view > section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+.erc721-view > section > header {
+  display: flex;
+  font-family: 'Trajan Pro Bold';
+  margin-bottom: 32px;
+}
+.erc721-view > section > header > h5 {
+  color: #cab39b;
+  font-size: 30px;
+}
+.erc721-view > section > header > .gaia {
+  color: #fff;
+  margin-right: 8px;
+}
+.erc721-view > section > .erc-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+.erc1155-view > header > a {
+  max-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 20px;
+}
+.erc1155-view > header > a > p {
+  margin-right: 12px;
 }
 .erc1155-view > section {
   display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+.erc1155-view > section > header {
+  display: flex;
+  font-family: 'Trajan Pro Bold';
+  margin-bottom: 32px;
+}
+.erc1155-view > section > header > h5 {
+  color: #cab39b;
+  font-size: 30px;
+}
+.erc1155-view > section > header > .gaia {
+  color: #fff;
+  margin-right: 8px;
+}
+.erc1155-view > section > .erc-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
 
