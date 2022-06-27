@@ -30,17 +30,18 @@
 
         >header {
             margin-top: 16px;
+            font-size : 20px;
 
             >h6 {
-                font-weight: bold;
-                font-size  : 18px;
-                margin     : 20px 0px;
+                font-weight  : bold;
+                margin-top   : 20px;
+                margin-bottom: 24px;
+                color        : #f8f0eb;
             }
 
             >p {
                 font-weight: bold;
-                font-size  : 18px;
-                color      : rgb(178, 167, 148);
+                color      : #d0c0a3;
             }
         }
 
@@ -48,6 +49,10 @@
             display      : flex;
             gap          : 12px;
             margin-bottom: 32px;
+
+            @media @phone {
+                flex-direction: column;
+            }
 
             >a {
                 display        : flex;
@@ -60,13 +65,81 @@
             >.detail-button {
                 width     : 216px;
                 height    : 61px;
-                background: url("/images/img/blackButton.png");
+                background: url("/images/img/redButton.png");
             }
 
             >a.send-button {
                 width     : 216px;
                 height    : 61px;
-                background: url("/images/img/redButton.png");
+                background: url("/images/img/blackButton.png");
+            }
+        }
+    }
+
+    @media @phone {
+        width          : 100%;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        width          : 100%;
+        background     : url("");
+
+        >header {
+            font-size: 16px;
+        }
+
+        >img {
+            background-color: #000;
+            border          : 1px solid rgb(41, 42, 37);
+            border-radius   : 4px;
+            margin          : 0px;
+            max-width       : 172px;
+        }
+
+        >.content {
+            width          : 100%;
+            margin         : 0px;
+            justify-content: center;
+            text-align     : center;
+
+            >header {
+                margin: 0px;
+
+                >h6 {
+                    font-size: 16px;
+                    margin   : 16px 0px;
+                }
+
+                >p {
+                    font-size: 16px;
+                }
+            }
+
+            >.button-container {
+                margin-top     : 16px;
+                width          : 100%;
+                flex-direction : row;
+                justify-content: center;
+
+                >a {
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: center;
+                    font-size      : 16px;
+                    color          : #f8f0eb;
+                }
+
+                >.detail-button {
+                    width     : 151px;
+                    height    : 43px;
+                    background: url("/images/img/mobile/redButton.png");
+                }
+
+                >a.send-button {
+                    width     : 151px;
+                    height    : 43px;
+                    background: url("/images/img/mobile/blackButton.png");
+                }
             }
         }
     }

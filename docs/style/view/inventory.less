@@ -1,4 +1,8 @@
 .inventory-view {
+    @media @phone {
+        padding: 8px;
+    }
+
     >header {
         display      : flex;
         font-family  : 'Trajan Pro Bold';
@@ -18,5 +22,9 @@
     >section {
         display              : grid;
         grid-template-columns: repeat(2, 1fr);
+
+        @media @phone {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 }

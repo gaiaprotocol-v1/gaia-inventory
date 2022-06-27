@@ -1,7 +1,7 @@
 .erc-item {
     display    : flex;
     align-items: center;
-    background : url("/images/img/InventorySlot.png");
+    background : url("/images/img/inventorySlot.png");
     max-width  : 564px;
     height     : 144px;
 
@@ -15,18 +15,50 @@
     }
 
     >.content {
+        font-size  : 20px;
         margin-left: 20px;
 
         >h6 {
             font-weight  : bold;
-            font-size    : 18px;
             margin-bottom: 20px;
+            color        : #f8f0eb;
         }
 
         >p {
             font-weight: bold;
-            font-size  : 18px;
-            color      : rgb(178, 167, 148);
+            color      : #d0c0a3;
+        }
+    }
+
+
+    @media @phone {
+        max-width : 395px;
+        height    : 101px;
+        background: url("/images/img/mobile/inventorySlot.png");
+
+        >.img-container {
+            margin-left: 8px;
+
+            >img {
+                width : 77px;
+                height: 77px;
+            }
+        }
+
+        >.content {
+            font-size  : 16px;
+            margin-left: 12px;
+
+            >h6 {
+                font-weight  : bold;
+                margin-bottom: 12px;
+                color        : #f8f0eb;
+            }
+
+            >p {
+                font-weight: bold;
+                color      : #d0c0a3;
+            }
         }
     }
 }

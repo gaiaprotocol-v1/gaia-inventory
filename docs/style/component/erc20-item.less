@@ -18,28 +18,71 @@
         margin-left    : 20px;
 
         >.title {
+            font-size: 20px;
+
             >h6 {
                 font-weight: bold;
-                font-size  : 18px;
                 margin     : 20px 0px;
+                color      : #f8f0eb;
             }
 
             >p {
                 font-weight: bold;
-                font-size  : 18px;
-                color      : rgb(178, 167, 148);
+                color      : #d0c0a3;
             }
         }
 
         >a {
-            font-size      : 18px;
+            color          : #f8f0eb;
+            font-size      : 20px;
             font-weight    : bold;
             display        : flex;
             align-items    : center;
             justify-content: center;
-            width          : 216px;
+            max-width      : 216px;
+            width          : 100%;
             height         : 61px;
             background     : url("/images/img/blackButton.png");
+        }
+    }
+
+    @media @phone {
+        justify-content: center;
+        align-items    : center;
+        flex-direction : column;
+
+        >.img-container {
+            max-width: 128px;
+
+            >img {
+                max-width: 128px;
+            }
+        }
+
+        >.content {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            width          : 100%;
+
+            >.title {
+                font-size: 16px;
+
+                >h6 {
+                    font-weight: bold;
+                    margin     : 12px 0px;
+                    color      : #f8f0eb;
+                }
+            }
+
+            >a {
+                margin-top: 8px;
+                max-width : 151px;
+                width     : 100%;
+                height    : 43px;
+                font-size : 16px;
+                background: url("/images/img/mobile/blackButton.png");
+            }
         }
     }
 }
